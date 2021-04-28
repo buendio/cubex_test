@@ -1,0 +1,137 @@
+
+@import "base.less";
+/*-------------------END BASE STYLE----------------------------------*/
+@import "fonts.less";
+/*-------------------END FONTS STYLE---------------------------------*/
+
+/*!!!!!!!!!!!!!!!!!!!STYLE CSS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+body {
+	position: relative;
+	min-height: 100vh;
+	font-family: 'Rubik', sans-serif;
+	font-size: 16px;
+}
+
+/*------------------END BODY && WRAP BASE STYLE------------------------------*/
+header {
+	text-align: center;
+	padding-top: 20px;
+}
+/*-------------------END HEADER--------------------------------------*/
+
+.enter {
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 376px;
+	h2 {
+		margin-bottom: 50px;
+		font-size: 20px;
+		font-weight: normal;
+		color:#363636;
+		text-transform: uppercase;
+	}
+	p {
+		display:none;
+		margin: -20px 0 35px;
+		font-size: 14px;
+		line-height: 1.57;
+		color:#717171;
+		&.active {
+			display: block;
+		}
+	}
+	.input__wrap {
+		position: relative;
+		margin-bottom: 30px;
+		label.error {
+			display: none;
+			position: absolute;
+			left: 0;
+			bottom:-15px;
+			color:#940000;
+			font-size: 12px;
+		}
+		label.change {
+			display: none;
+			position: absolute;
+			left: 10px;
+			top:-5px;
+			background:#fff;
+			color:#83BE19;
+			font-size: 12px;
+		}
+		label.sucses {
+			display: none;
+			position: absolute;
+			left: 10px;
+			top:-5px;
+			background:#fff;
+			color:#8BBCDC;
+			font-size: 12px;
+		}
+		&.error {
+			input {
+				border:1px solid#FF1A00;
+			}
+			label.error {
+				display: block;
+			}
+		}
+		&.change {
+			input {
+				border:1px solid#83BE19;
+			}
+			label.change {
+				display: block;
+			}
+		}
+		&.sucses {
+			input {
+				border:1px solid #8BBCDC;
+			}
+			label.sucses {
+				display: block;
+			}
+		}
+
+	}
+	input {
+		display: block;
+		width: 100%;
+		padding: 20px;
+		box-sizing:border-box;
+		background:#FBFBFB;
+		color:#707070;
+		font-size: 16px;
+		border:1px solid #8BBCDC;
+		border-radius: 5px;
+	}
+	button {
+		display: block;
+		width: 100%;
+		padding: 25px 0;
+		background: #0690C8;
+		border-radius: 5px;
+		color:#fff;
+		&:hover, &:focus {
+			background: #28B5EE;
+		}
+		&:active {
+			background:#18789F;
+		}
+	}
+	:-moz-placeholder {color:rgba(#707070, 0.5);font-family: 'Rubik', sans-serif;font-size:16px;}
+	::-moz-placeholder {color:rgba(#707070, 0.5);font-family: 'Rubik', sans-serif;font-size:16px;}
+	:-ms-input-placeholder {color:rgba(#707070, 0.5);font-family: 'Rubik', sans-serif;font-size:16px;}
+	::-webkit-input-placeholder {color:rgba(#707070, 0.5);font-family: 'Rubik', sans-serif;font-size:16px;}
+}
+/*-------------------END MAIN----------------------------------------*/
+
+/*+++++++++++++++++++START FOOTER +++++++++++++++++++++++++++++++++++*/
+footer {
+
+}
+/*~~~~~~~~~~~~~~~~~~~MEDIA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@import "media.less";

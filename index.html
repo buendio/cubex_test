@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+    </header>
+    <form action="" class="enter">
+        <h2>Вход в кабинет пользователя</h2>
+        <p class="active">
+            На ваш телефон +38 (099) 4хх хх 37 отправлен СМС с кодом подтверждения
+        </p>
+        <div class="input__wrap">
+            <input type="text" placeholder="Введите свой ИНН" class="inp">
+            <label class="error" for="">Поле обязательно для заполнения</label>
+            <label for="" class="change">Введите свой ИНН</label>
+            <label for="" class="sucses">Введите свой ИНН</label>
+        </div>
+        <button>Получить код входа</button>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- https://developers.google.com/speed/libraries/  actual version -->
+    <script>
+ $(document).ready(function(){
+
+        ////////////////Валидация формы////////////////////////\
+        const form = document.querySelector('.enter');
+            let inputs = form.elements;
+            const inp = document.querySelectorAll('.inp')
+            form.addEventListener('focusin', function(e) {
+                if(e.target.classList.contains('inp')) {
+                    e.target.closest('.input__wrap').classList.remove('sucses');
+                    e.target.closest('.input__wrap').classList.remove('error');
+                    e.target.closest('.input__wrap').classList.add('change')                  
+                }  
+            })
+            form.addEventListener('focusout', function(e) {
+                if(e.target.classList.contains('inp')) {
+                    e.target.closest('.input__wrap').classList.remove('change') 
+                    if(e.target.value == '')  {
+                        e.target.closest('.input__wrap').classList.remove('sucses');
+                        e.target.closest('.input__wrap').classList.add('error');
+                    } else {
+                        e.target.closest('.input__wrap').classList.remove('error');
+                        e.target.closest('.input__wrap').classList.add('sucses')
+                    }             
+                }  
+            })
+           
+           
+            form.addEventListener('submit', function(event) {                
+                [...inputs].forEach( input => {
+                    
+                    if(input.type != "submit") {
+                    
+                        input.closest('.input__wrap').classList.remove('error');
+                        input.closest('.input__wrap').classList.remove('change');
+                       
+                        
+                        if (input.value === '') {
+                        event.preventDefault();
+                        input.closest('.input__wrap').classList.add('error');
+                       
+                        
+                        } 
+                    }    
+                })
+            })
+        }); // end ready 
+    </script>
+</body>
+
+</html>
