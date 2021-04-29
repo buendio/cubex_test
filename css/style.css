@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 html {
   font-size: 16px;
@@ -135,10 +136,23 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
 }
+.wrap {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 3.9%;
+}
 /*------------------END BODY && WRAP BASE STYLE------------------------------*/
 header {
   text-align: center;
   padding-top: 20px;
+}
+header.headerPage .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main {
+  position: relative;
 }
 /*-------------------END HEADER--------------------------------------*/
 .enter {
@@ -153,17 +167,29 @@ header {
   font-size: 20px;
   font-weight: normal;
   color: #363636;
+  text-align: center;
   text-transform: uppercase;
 }
 .enter p {
   display: none;
-  margin: -20px 0 35px;
   font-size: 14px;
   line-height: 1.57;
   color: #717171;
 }
+.enter p.topP {
+  margin: -20px 0 35px;
+}
+.enter p.bootomP {
+  max-width: 290px;
+  margin: 30px auto 0;
+  text-align: center;
+}
 .enter p.active {
   display: block;
+}
+.enter p a {
+  color: #0690C8;
+  text-decoration: underline;
 }
 .enter .input__wrap {
   position: relative;
@@ -213,31 +239,11 @@ header {
 .enter .input__wrap.sucses label.sucses {
   display: block;
 }
-.enter input {
+.enter .input__wrap.activesms input {
+  border: 1px solid #83BE19;
+}
+.enter .input__wrap.activesms label.sms {
   display: block;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background: #FBFBFB;
-  color: #707070;
-  font-size: 16px;
-  border: 1px solid #8BBCDC;
-  border-radius: 5px;
-}
-.enter button {
-  display: block;
-  width: 100%;
-  padding: 25px 0;
-  background: #0690C8;
-  border-radius: 5px;
-  color: #fff;
-}
-.enter button:hover,
-.enter button:focus {
-  background: #28B5EE;
-}
-.enter button:active {
-  background: #18789F;
 }
 .enter :-moz-placeholder {
   color: rgba(112, 112, 112, 0.5);
@@ -259,8 +265,129 @@ header {
   font-family: 'Rubik', sans-serif;
   font-size: 16px;
 }
+label.sms {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: -5px;
+  background: #fff;
+  color: #83BE19;
+  font-size: 12px;
+}
+.inp {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #FBFBFB;
+  color: #707070;
+  font-size: 16px;
+  border: 1px solid #8BBCDC;
+  border-radius: 5px;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 25px 0;
+  background: #0690C8;
+  border-radius: 5px;
+  color: #fff;
+}
+.btn:hover,
+.btn:focus {
+  background: #28B5EE;
+}
+.btn:active {
+  background: #18789F;
+}
+.btn2 {
+  display: block;
+  width: 221px;
+  margin: 18px auto 0;
+  padding: 12px 0;
+  border: 1px solid #61AAF3;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #434343;
+}
+.btn2:hover,
+.btn2:focus {
+  background: #0690C8;
+  color: #fff;
+}
+.btn2:active {
+  background: #18789F;
+}
+.btn270 {
+  width: 270px;
+  max-height: 60px;
+  margin: 30px auto 0;
+}
+.info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  width: 284px;
+  margin: 30px auto 0;
+  padding: 20px;
+  background: rgba(96, 180, 0, 0.06);
+  border: 1px solid rgba(96, 180, 0, 0.3);
+  border-radius: 5px;
+  font-size: 14px;
+  color: #434343;
+  text-align: center;
+}
+.info img {
+  max-width: 20px;
+  margin-right: 10px;
+}
+.flexGroup {
+  margin-top: 48px;
+  font-size: 14px;
+  color: #434343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flexGroup .btn2 {
+  width: 180px;
+  margin: 0 0 0 27px;
+}
+.inpPassw {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #FBFBFB;
+  color: #707070;
+  font-size: 16px;
+  border: 1px solid #8BBCDC;
+  border-radius: 5px;
+}
+.input__wrap_password input {
+  border: 1px solid #83BE19;
+}
+.input__wrap_password label {
+  position: absolute;
+  left: 10px;
+  top: -5px;
+  background: #fff;
+  color: #83BE19;
+  font-size: 12px;
+}
 /*-------------------END MAIN----------------------------------------*/
 /*+++++++++++++++++++START FOOTER +++++++++++++++++++++++++++++++++++*/
 /*~~~~~~~~~~~~~~~~~~~MEDIA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*-------------------------------------------*/
 /*-------------------------------------------*/
+@media only screen and (max-width: 450px) {
+  body {
+    padding-bottom: 50px;
+  }
+  .enter {
+    padding: 0 20px;
+    top: 30vh;
+    transform: translateX(-50%) translateY(0%);
+  }
+}

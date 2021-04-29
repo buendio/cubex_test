@@ -12,28 +12,33 @@
 </head>
 
 <body>
-    <header>
-        <a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+    <header class="headerPage">
+        <div class="wrap">
+            <a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+            <button class="close"><img src="img/close.png" alt=""></button>
+        </div>
+       
     </header>
     <form action="" class="enter">
         <h2>Вход в кабинет пользователя</h2>
-        <p class="active topP">
-            На ваш телефон +38 (099) 4хх хх 37 отправлен СМС с кодом подтверждения
-        </p>
+        
         <div class="input__wrap">
             <input type="text" placeholder="Введите свой ИНН" class="inp">
             <label class="error" for="">Поле обязательно для заполнения</label>
             <label for="" class="change">Введите свой ИНН</label>
             <label for="" class="sucses">Введите свой ИНН</label>
-            <label class="sms">Код из СМС</label>
         </div>
-        <button class="btn">Получить код входа</button>
-        <button class="btn2">Отправить код повторно</button>
-        <div class="info"><img src="img/check.svg" alt=""> СМС код отправлен повторно</div>
-        <p class="active bootomP">
-            Если вы не получили код подтверждения, 
-            обратитесь <a href="">в службу поддержки</a>
-        </p>
+        <div class="input__wrap input__wrap_password">
+            <input type="password" placeholder="" class="inpPassw">
+            <label for="">Ваш пароль</label>
+        </div>
+        <button class="btn btn270">Далее</button>
+        <button class="btn2">Напомнить пароль</button>
+        <div class="flexGroup">
+            <span>Я новый пользователь:</span>
+            <button class="btn2">Зарегистрироваться</button>
+        </div>
+
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
