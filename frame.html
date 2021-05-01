@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+    <header class="headerPage">
+        <div class="wrap">
+            <a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+            
+        </div>
+       
+    </header>
+    <div class="wrap">
+        <h2 class="title">Ознакомление с договором</h2>
+        <div class="flxGroup">
+            <div class="input__wrap">
+                <input type="text" class="inp">
+                <label for="" class="labelInfo">Сумма кредита (грн)</label>
+            </div>
+            <div class="input__wrap">
+                <input type="text" class="inp">
+                <label for="" class="labelInfo">Кол-во платежей (мес)</label>
+            </div>
+            <div class="input__wrap">
+                <input type="text" class="inp">
+                <label for="" class="labelInfo">Сумма платежа (грн)</label>
+            </div>
+
+            <button class="btn" disabled>Сохранить изменения</button>
+        </div>
+        <div class="frame">
+
+        </div>
+        <form action="" class="enter enterStatic">
+            <div class="check btn__hide active">
+                <div class="check__item"> 
+                    <div class="check__inp">
+                        <input type="checkbox" id="check1">
+                        <label for="check1"></label>
+                    </div>
+                    <p>Я подтверждаю, что получил информацию предусмотренную ст 99231. О финансовых услугах и государственном регулировании бла блаю </p>
+                </div>
+                <div class="check__item">
+                    <div class="check__inp">
+                        <input type="checkbox" id="check2">
+                        <label for="check2"></label>
+                    </div>
+                    <p>Регистрируясь, вы соглашаетесь с <a href="">пользовательским соглашением</a></p>
+                </div>
+                <button class="btn">Подтвердить договор</button>
+            </div>
+            <div class="input__wrap change">
+                <input type="text" class="inp">
+                <label class="change">Код из СМС</label>
+            </div>
+            <button class="btn btn__hide active">Подписать договор</button>
+            <button class="btn2 btn__hide active">Отправить код повторно</button>
+        </form>
+        
+        
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- https://developers.google.com/speed/libraries/  actual version -->
+    <script>
+ $(document).ready(function(){
+
+        ////////////////Валидация формы////////////////////////\
+        const form = document.querySelector('.enter');
+            let inputs = form.elements;
+            const inp = document.querySelectorAll('.inp')
+            
+        }); // end ready 
+    </script>
+</body>
+
+</html>

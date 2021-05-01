@@ -17,20 +17,26 @@
     </header>
     <form action="" class="enter">
         <h2>Вход в кабинет пользователя</h2>
-        <p class="active topP">
+        <p class="active btn_hide topP">
             На ваш телефон +38 (099) 4хх хх 37 отправлен СМС с кодом подтверждения
         </p>
         <div class="input__wrap">
-            <input type="text" placeholder="Введите свой ИНН" class="inp">
+            <input type="text" placeholder="Введите свой ИНН" class="inp inpValid">
             <label class="error" for="">Поле обязательно для заполнения</label>
             <label for="" class="change">Введите свой ИНН</label>
             <label for="" class="sucses">Введите свой ИНН</label>
             <label class="sms">Код из СМС</label>
         </div>
+        <div class="input__wrap change" class="">
+            <input type="text" class="inp">
+            <label class="change">Код из СМС</label>
+        </div>
         <button class="btn">Получить код входа</button>
-        <button class="btn2">Отправить код повторно</button>
-        <div class="info"><img src="img/check.svg" alt=""> СМС код отправлен повторно</div>
-        <p class="active bootomP">
+        <button class="btn btn__hide">Войти</button>
+        <button class="btn2 btn__hide active">Отправить код повторно</button>
+        <div class="info active"><img src="img/check.svg" alt=""> СМС код отправлен повторно</div>
+        <div class="danger active"><img src="img/atten.svg" alt=""> Введенный вами ИНН отсутствует в базе. проверьте правильность ввода</div>
+        <p class="active btn_hide bootomP">
             Если вы не получили код подтверждения, 
             обратитесь <a href="">в службу поддержки</a>
         </p>
@@ -44,10 +50,10 @@
         ////////////////Валидация формы////////////////////////\
         const form = document.querySelector('.enter');
             let inputs = form.elements;
-            const inp = document.querySelectorAll('.inp')
+            const inp = document.querySelectorAll('.inpValid')
             form.addEventListener('focusin', function(e) {
                 if( e.target.closest('.input__wrap').classList.contains('activesms')) {return}
-                if(e.target.classList.contains('inp')) {
+                if(e.target.classList.contains('inpValid')) {
                     
                     e.target.closest('.input__wrap').classList.remove('sucses');
                     e.target.closest('.input__wrap').classList.remove('error');
@@ -56,7 +62,7 @@
             })
             form.addEventListener('focusout', function(e) {
                 if( e.target.closest('.input__wrap').classList.contains('activesms')) {return}
-                if(e.target.classList.contains('inp')) {
+                if(e.target.classList.contains('inpValid')) {
                     e.target.closest('.input__wrap').classList.remove('change') 
                     if(e.target.value == '')  {
                         e.target.closest('.input__wrap').classList.remove('sucses');

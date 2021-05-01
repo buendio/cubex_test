@@ -23,7 +23,7 @@
         <h2>Вход в кабинет пользователя</h2>
         
         <div class="input__wrap">
-            <input type="text" placeholder="Введите свой ИНН" class="inp">
+            <input type="text" placeholder="Введите свой ИНН" class="inp inpValid">
             <label class="error" for="">Поле обязательно для заполнения</label>
             <label for="" class="change">Введите свой ИНН</label>
             <label for="" class="sucses">Введите свой ИНН</label>
@@ -32,11 +32,13 @@
             <input type="password" placeholder="" class="inpPassw">
             <label for="">Ваш пароль</label>
         </div>
-        <button class="btn btn270">Далее</button>
-        <button class="btn2">Напомнить пароль</button>
+        <button class="btn ">Получить код входа</button>
+        <button class="btn btn__hide active btn270">Далее</button>
+        <button class="btn2 btn__hide active">Напомнить пароль</button>
+        <button class="btn2 btn__hide active">Отправить код повторно</button>
         <div class="flexGroup">
-            <span>Я новый пользователь:</span>
-            <button class="btn2">Зарегистрироваться</button>
+            <a href="">Я новый пользователь:</a>
+            <button class="btn2 active">Зарегистрироваться</button>
         </div>
 
     </form>
@@ -49,10 +51,10 @@
         ////////////////Валидация формы////////////////////////\
         const form = document.querySelector('.enter');
             let inputs = form.elements;
-            const inp = document.querySelectorAll('.inp')
+            const inp = document.querySelectorAll('.inpValid')
             form.addEventListener('focusin', function(e) {
                 if( e.target.closest('.input__wrap').classList.contains('activesms')) {return}
-                if(e.target.classList.contains('inp')) {
+                if(e.target.classList.contains('inpValid')) {
                     
                     e.target.closest('.input__wrap').classList.remove('sucses');
                     e.target.closest('.input__wrap').classList.remove('error');
@@ -61,7 +63,7 @@
             })
             form.addEventListener('focusout', function(e) {
                 if( e.target.closest('.input__wrap').classList.contains('activesms')) {return}
-                if(e.target.classList.contains('inp')) {
+                if(e.target.classList.contains('inpValid')) {
                     e.target.closest('.input__wrap').classList.remove('change') 
                     if(e.target.value == '')  {
                         e.target.closest('.input__wrap').classList.remove('sucses');

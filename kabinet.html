@@ -6,7 +6,7 @@
     <title>Главная</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
 </head>
@@ -14,33 +14,201 @@
 <body>
     <header class="headerPage">
         <div class="wrap">
-            <a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
-            <button class="close"><img src="img/close.png" alt=""></button>
+            <div class="header__item">
+                <a href="/" class="logo"><img src="img/logo.svg" alt=""></a>
+                <div class="separ"></div>
+                <span>Кабинет пользователя</span>
+            </div>
+            <div class="header__item">
+                <div class="header__name">
+                    <img src="img/user.svg" alt="">
+                    <p>
+                        <span>Пухляш Татьяна Николаевна</span>
+                        <span>ИНН: 987654321789</span>
+                    </p>
+                </div>
+                <button class="close"><img src="img/close.png" alt=""></button>
+            </div>
+            
         </div>
        
     </header>
-    <form action="" class="enter">
-        <h2>Вход в кабинет пользователя</h2>
-        
-        <div class="input__wrap">
-            <input type="text" placeholder="Введите свой ИНН" class="inp">
-            <label class="error" for="">Поле обязательно для заполнения</label>
-            <label for="" class="change">Введите свой ИНН</label>
-            <label for="" class="sucses">Введите свой ИНН</label>
+    <nav>
+        <ul class="nav">
+            <li><a href="" class="active">Договора</a></li>
+            <li><a href="">Заявка на новый лимит</a></li>
+            <li><a href="">Личные данные</a></li>
+            <li><a href="">BankID</a></li>
+        </ul>
+    </nav>
+    <main class="kabinetPage">
+        <div class="wrap">
+            <div class="item">
+                <div class="item__header">
+                    <div class="item__headerBlock">
+                        <h2 class="item__title">Договор № 578</h2>
+                        <div class="item__status"><span class="active"></span> Активный</div>
+                    </div>
+                    <div class="item__headerBlock">
+                        <div class="item__date">от 12.10.2021 г.</div>
+                        <div class="item__date">по 12.10.2022 г.</div>
+                    </div>
+                </div>
+                <div class="item__body">
+                    <span>Сумма договора</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата последнего платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Минимальный платеж</span>
+                    <span>5000 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата минимального платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Сумма к закрытию</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Расчетная дата</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__footer">
+                    <a href="" class="item__btn">Оплатить кредит</a>
+                    <a href="" class="item__link">Получить эл. экземпляр договора</a>
+                    <a href="" class="item__link">Получить выписку</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__header">
+                    <div class="item__headerBlock">
+                        <h2 class="item__title">Договор № 578</h2>
+                        <div class="item__status"><span class="wait"></span> На рассмотрении</div>
+                    </div>
+                    <div class="item__headerBlock">
+                        <div class="item__date">от 12.10.2021 г.</div>
+                        <div class="item__date">по 12.10.2022 г.</div>
+                    </div>
+                </div>
+                <div class="item__body">
+                    <span>Сумма договора</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата последнего платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Минимальный платеж</span>
+                    <span>5000 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата минимального платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Сумма к закрытию</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Расчетная дата</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__footer">
+                    <a href="" class="item__btn">Оплатить кредит</a>
+                    <a href="" class="item__link">Получить эл. экземпляр договора</a>
+                    <a href="" class="item__link">Получить выписку</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__header">
+                    <div class="item__headerBlock">
+                        <h2 class="item__title">Договор № 578</h2>
+                        <div class="item__status"><span class="active"></span> Активный</div>
+                    </div>
+                    <div class="item__headerBlock">
+                        <div class="item__date">от 12.10.2021 г.</div>
+                        <div class="item__date">по 12.10.2022 г.</div>
+                    </div>
+                </div>
+                <div class="item__body">
+                    <span>Сумма договора</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата последнего платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Минимальный платеж</span>
+                    <span>5000 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата минимального платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Сумма к закрытию</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Расчетная дата</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__footer">
+                    <a href="" class="item__btn">Оплатить кредит</a>
+                    <a href="" class="item__link">Получить эл. экземпляр договора</a>
+                    <a href="" class="item__link">Получить выписку</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__header">
+                    <div class="item__headerBlock">
+                        <h2 class="item__title">Договор № 578</h2>
+                        <div class="item__status"><span class="active"></span> Активный</div>
+                    </div>
+                    <div class="item__headerBlock">
+                        <div class="item__date">от 12.10.2021 г.</div>
+                        <div class="item__date">по 12.10.2022 г.</div>
+                    </div>
+                </div>
+                <div class="item__body">
+                    <span>Сумма договора</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата последнего платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Минимальный платеж</span>
+                    <span>5000 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Дата минимального платежа</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__body">
+                    <span>Сумма к закрытию</span>
+                    <span>12 500 грн</span>
+                </div>
+                <div class="item__body">
+                    <span>Расчетная дата</span>
+                    <span>12.05.2020</span>
+                </div>
+                <div class="item__footer">
+                    <a href="" class="item__btn">Оплатить кредит</a>
+                    <a href="" class="item__link">Получить эл. экземпляр договора</a>
+                    <a href="" class="item__link">Получить выписку</a>
+                </div>
+            </div>
         </div>
-        <div class="input__wrap input__wrap_password">
-            <input type="password" placeholder="" class="inpPassw">
-            <label for="">Ваш пароль</label>
-        </div>
-        <button class="btn btn270">Далее</button>
-        <button class="btn2">Напомнить пароль</button>
-        <div class="flexGroup">
-            <span>Я новый пользователь:</span>
-            <button class="btn2">Зарегистрироваться</button>
-        </div>
-
-    </form>
-
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <!-- https://developers.google.com/speed/libraries/  actual version -->
 
